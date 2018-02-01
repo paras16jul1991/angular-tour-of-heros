@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -10,6 +11,11 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { SplitDetailComponent } from './split-detail/split-detail.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +24,17 @@ import { MessageService } from './message.service';
     NavComponent,
     FooterComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    LoginComponent,
+    UserDetailComponent,
+    SplitDetailComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [AppComponent]
