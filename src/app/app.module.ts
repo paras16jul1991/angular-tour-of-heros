@@ -16,6 +16,9 @@ import { LoginComponent } from './login/login.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { SplitDetailComponent } from './split-detail/split-detail.component';
 import { ChartComponent } from './chart/chart.component';
+import { HttpModule } from '@angular/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { ChartComponent } from './chart/chart.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    HttpModule,
+    HttpClientModule
   ],
   providers: [ HeroService, MessageService ],
   bootstrap: [AppComponent]
