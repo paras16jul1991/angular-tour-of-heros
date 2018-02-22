@@ -4,8 +4,6 @@
     dist: trusty
 
     node_js:
-      - '6'
-      - '7'
       - '8'
 
     cache:
@@ -23,6 +21,16 @@
     install:
       - travis_retry npm i
 
-
+    script:
+  - npm run lint:ci
+  - npm run build:prod
+  
     git:
       depth: 1
+
+    addons:
+     chrome: stable
+     
+   before_script:
+    - "sudo chown root /opt/google/chrome/chrome-sandbox"
+    - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
