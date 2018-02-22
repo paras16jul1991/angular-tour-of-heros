@@ -23,6 +23,9 @@
     install:
       - travis_retry npm i
 
-
+    script:
+  - npm run lint:ci
+  - npm run build:prod
+  
     git:
       depth: 1
