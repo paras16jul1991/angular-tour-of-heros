@@ -2,29 +2,38 @@
 
 	 <h1>Create a new Kitty</h1>
 
-	 <form>
+	 <form #expenseForm="ngForm" (ngSubmit)="onSubmit(expenseForm.value)">
 	 
 	  <div class="form-group">
 		<label for="exampleInputEventName">Event Name</label>
-		<input type="text" class="form-control" id="exampleInputEventName" placeholder="Ski Event">
+		<input type="text" class="form-control" name="eventName" ngModel   id="eventName" placeholder="Ski Event">
 		<small id="textHelp" class="form-text text-muted">Please enter Event Name.</small>
 	  </div>
 	  
 	   <h1>Participents</h1>
 	  <div class="form-group">
 		<label for="yourDetails">You</label>
-		<input type="text" class="form-control" id="yourDetails" placeholder="Your Name">
-		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email">
+		<input type="text" class="form-control" id="expenseByUser" name="expenseByUser" ngModel placeholder="Your Name">
+		<input type="email" class="form-control" id="expenseByUserEmail" name="expenseByUserEmail"  aria-describedby="emailHelp"  placeholder="Your Email" >
 
 	  </div>
 	   <div class="form-group">
 		<label for="exampleInputName1">Person Name</label>
-		<input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
-	  </div>
+		<input type="text"  name="newItem" class="form-control" id="newItem" [(ngModel)]="newItem" placeholder="Name">
+		<button (click)="pushItem()">Add</button>
+		<ul>
+				<li *ngFor = "let i of userList">
+					{{i}}
+					<span>X</span>
+				</li>
+
+			</ul>
+			
+
+	</div>
 	  
 	  
 	  <div class="error-container">
-          <a routerLink="/splitdetail"><button type="submit" id="button-submit-kitty" class="btn btn-md btn-primary">Create Kitty</button></a>
-      </div>
+			<a routerLink="/splitdetail" class="btn btn-lg btn-primary btn-start ">Create Kitty</a>	</div>
 	</form>
 </div>
