@@ -1,36 +1,8 @@
-    language: node_js
-
-    sudo: false
-    dist: trusty
-
-    node_js:
-      - '8'
-
-    cache:
-      directories:
-        - node_modules
-
-    branches:
-      only:
-      - master
-
+ language: java
+install:
+- mvn -N io.takari:maven:wrapper
+- ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script:
+- ./mvnw clean install
+- bash <(curl -s https://codecov.io/bash)
   
-    before_install:
-      - npm i -g npm@latest
-
-    install:
-      - travis_retry npm i
-
-    script:
-  - npm run lint:ci
-  - npm run build:prod
-  
-    git:
-      depth: 1
-
-    addons:
-     chrome: stable
-     
-   before_script:
-    - "sudo chown root /opt/google/chrome/chrome-sandbox"
-    - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
