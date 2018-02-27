@@ -2,6 +2,10 @@
 install:
 - mvn -N io.takari:maven:wrapper
 - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+before_install:
+- chmod +x mvnw
+before_install:
+- chmod +x mvn
 script:
 - ./mvnw clean install
 - bash <(curl -s https://codecov.io/bash)
@@ -21,9 +25,11 @@ script:
 - npm run lint:ci
 - npm run build:prod
 git:
+git update-index --chmod=+x mvnw
 depth: 1
 addons:
 chrome: stable
 before_script:
 - "sudo chown root /opt/google/chrome/chrome-sandbox"
 - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+- "git update-index --chmod=+x mvnw"
