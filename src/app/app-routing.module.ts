@@ -15,7 +15,7 @@ const routes: Routes = [
  { path: 'splitdetail', component: SplitDetailComponent },
  { path: 'home', component: AdminComponent },
  { path: 'login', component: AdminloginComponent },
- { path: 'sign-up', component: RegisterComponent }
+ { path: 'register', component: RegisterComponent }
 ];
 
 @NgModule({
