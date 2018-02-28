@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/admin/admin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Greeting</h1>\n<div [hidden]=\"!authenticated()\">\n\t<p>The ID is {{greeting.id}}</p>\n\t<p>The content is {{greeting.content}}</p>\n</div>\n<div [hidden]=\"authenticated()\">\n\t<p>Login to see your greeting</p>\n</div>"
+module.exports = "<h1>Greeting</h1>\r\n<div [hidden]=\"!authenticated()\">\r\n\t<p>The ID is {{greeting.id}}</p>\r\n\t<p>The content is {{greeting.content}}</p>\r\n</div>\r\n<div [hidden]=\"authenticated()\">\r\n\t<p>Login to see your greeting</p>\r\n</div>"
 
 /***/ }),
 
@@ -114,7 +114,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/adminlogin/adminlogin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-md-6 col-md-offset-3\">\n    <div class=\"alert alert-info\">\n        Username: test<br />\n        Password: test\n    </div>\n    <h2>Login</h2>\n    <form name=\"form\" (ngSubmit)=\"f.form.valid && login()\" #f=\"ngForm\" novalidate>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !username.valid }\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"model.username\" #username=\"ngModel\" required />\n            <div *ngIf=\"f.submitted && !username.valid\" class=\"help-block\">Username is required</div>\n        </div>\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"model.password\" #password=\"ngModel\" required />\n            <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\n        </div>\n        <div class=\"form-group\">\n            <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\n        </div>\n\n        <div class=\"form-group\">\n            <a routerLink=\"/register\" class=\"btn btn-primary\">Login</a>\n        </div>\n\t\t<a>\n        <div *ngIf=\"error\" class=\"alert alert-danger\">{{error}}</div>\n    </form>\n</div>"
+module.exports = "<div class=\"col-md-6 col-md-offset-3\">\r\n    <div class=\"alert alert-info\">\r\n        Username: test<br />\r\n        Password: test\r\n    </div>\r\n    <h2>Login</h2>\r\n    <form name=\"form\" (ngSubmit)=\"f.form.valid && login()\" #f=\"ngForm\" novalidate>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !username.valid }\">\r\n            <label for=\"username\">Username</label>\r\n            <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"model.username\" #username=\"ngModel\" required />\r\n            <div *ngIf=\"f.submitted && !username.valid\" class=\"help-block\">Username is required</div>\r\n        </div>\r\n        <div class=\"form-group\" [ngClass]=\"{ 'has-error': f.submitted && !password.valid }\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)]=\"model.password\" #password=\"ngModel\" required />\r\n            <div *ngIf=\"f.submitted && !password.valid\" class=\"help-block\">Password is required</div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <button [disabled]=\"loading\" class=\"btn btn-primary\">Login</button>\r\n        </div>\r\n\r\n        <div class=\"form-group\">\r\n            <a routerLink=\"/register\" class=\"btn btn-primary\">Login</a>\r\n        </div>\r\n\t\t<a>\r\n        <div *ngIf=\"error\" class=\"alert alert-danger\">{{error}}</div>\r\n    </form>\r\n</div>"
 
 /***/ }),
 
@@ -261,7 +261,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-nav></app-nav>\n<router-outlet></router-outlet>\n<!--<app-footer></app-footer> -->"
+module.exports = "<app-nav></app-nav>\r\n<router-outlet></router-outlet>\r\n<!--<app-footer></app-footer> -->"
 
 /***/ }),
 
@@ -1085,7 +1085,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark fixed-top\">\n  <a class=\"navbar-brand\" href=\"#\">SplitMoney</a>\n  <div class=\"collapse navbar-collapse\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" (click)=\"logout()\">Logout</a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" routerLink=\"/login\">Admin Login</a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"https://medium.com/@beeman\"><i class=\"fa fa-medium\" aria-hidden=\"true\"></i></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"https://twitter.com/@beeman_nl\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"https://github.com/beeman\"><i class=\"fa fa-github\" aria-hidden=\"true\"></i></a>\n      </li>\n    </ul>\n  </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark fixed-top\">\r\n  <a class=\"navbar-brand\" href=\"#\">SplitMoney</a>\r\n  <div class=\"collapse navbar-collapse\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" (click)=\"logout()\">Logout</a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" routerLink=\"/login\">Admin Login</a>\r\n      </li>\r\n    </ul>\r\n    <ul class=\"navbar-nav\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"https://medium.com/@beeman\"><i class=\"fa fa-medium\" aria-hidden=\"true\"></i></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"https://twitter.com/@beeman_nl\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"https://github.com/beeman\"><i class=\"fa fa-github\" aria-hidden=\"true\"></i></a>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -1165,7 +1165,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  register works!\n</p>\n"
+module.exports = "<p>\r\n  register works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -1287,7 +1287,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/user-detail/user-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\t \n\n\t <h1>Create a new Kitty</h1>\n\n\t <form #expenseForm=\"ngForm\" (ngSubmit)=\"onSubmit(expenseForm.value)\">\n\t \n\t  <div class=\"form-group\">\n\t\t<label for=\"exampleInputEventName\">Event Name</label>\n\t\t<input type=\"text\" class=\"form-control\" name=\"eventName\" ngModel   id=\"eventName\" placeholder=\"Ski Event\">\n\t\t<small id=\"textHelp\" class=\"form-text text-muted\">Please enter Event Name.</small>\n\t  </div>\n\t  \n\t   <h1>Participents</h1>\n\t  <div class=\"form-group\">\n\t\t<label for=\"yourDetails\">You</label>\n\t\t<input type=\"text\" class=\"form-control\" id=\"expenseByUser\" name=\"expenseByUser\" ngModel placeholder=\"Your Name\">\n\t\t<input type=\"email\" class=\"form-control\" id=\"expenseByUserEmail\" name=\"expenseByUserEmail\"  aria-describedby=\"emailHelp\"  placeholder=\"Your Email\" >\n\n\t  </div>\n\t   <div class=\"form-group\">\n\t\t<label for=\"exampleInputName1\">Person Name</label>\n\t\t<input type=\"text\"  name=\"newItem\" class=\"form-control\" id=\"newItem\" [(ngModel)]=\"newItem\" placeholder=\"Name\">\n\t\t<button (click)=\"pushItem()\">Add</button>\n\t\t<ul>\n\t\t\t\t<li *ngFor = \"let i of userList\">\n\t\t\t\t\t{{i}}\n\t\t\t\t\t<span>X</span>\n\t\t\t\t</li>\n\n\t\t\t</ul>\n\t\t\t\n\n\t</div>\n\t  \n\t  \n\t  <div class=\"error-container\">\n\t\t\t<a routerLink=\"/splitdetail\" class=\"btn btn-lg btn-primary btn-start \">Create Kitty</a>\t</div>\n\t</form>\n</div>"
+module.exports = "<div class=\"container\">\t \r\n\r\n\t <h1>Create a new Kitty</h1>\r\n\r\n\t <form #expenseForm=\"ngForm\" (ngSubmit)=\"onSubmit(expenseForm.value)\">\r\n\t \r\n\t  <div class=\"form-group\">\r\n\t\t<label for=\"exampleInputEventName\">Event Name</label>\r\n\t\t<input type=\"text\" class=\"form-control\" name=\"eventName\" ngModel   id=\"eventName\" placeholder=\"Ski Event\">\r\n\t\t<small id=\"textHelp\" class=\"form-text text-muted\">Please enter Event Name.</small>\r\n\t  </div>\r\n\t  \r\n\t   <h1>Participents</h1>\r\n\t  <div class=\"form-group\">\r\n\t\t<label for=\"yourDetails\">You</label>\r\n\t\t<input type=\"text\" class=\"form-control\" id=\"expenseByUser\" name=\"expenseByUser\" ngModel placeholder=\"Your Name\">\r\n\t\t<input type=\"email\" class=\"form-control\" id=\"expenseByUserEmail\" name=\"expenseByUserEmail\"  aria-describedby=\"emailHelp\"  placeholder=\"Your Email\" >\r\n\r\n\t  </div>\r\n\t   <div class=\"form-group\">\r\n\t\t<label for=\"exampleInputName1\">Person Name</label>\r\n\t\t<input type=\"text\"  name=\"newItem\" class=\"form-control\" id=\"newItem\" [(ngModel)]=\"newItem\" placeholder=\"Name\">\r\n\t\t<button (click)=\"pushItem()\">Add</button>\r\n\t\t<ul>\r\n\t\t\t\t<li *ngFor = \"let i of userList\">\r\n\t\t\t\t\t{{i}}\r\n\t\t\t\t\t<span>X</span>\r\n\t\t\t\t</li>\r\n\r\n\t\t\t</ul>\r\n\t\t\t\r\n\r\n\t</div>\r\n\t  \r\n\t  \r\n\t  <div class=\"error-container\">\r\n\t\t\t<a routerLink=\"/splitdetail\" class=\"btn btn-lg btn-primary btn-start \">Create Kitty</a>\t</div>\r\n\t</form>\r\n</div>"
 
 /***/ }),
 
