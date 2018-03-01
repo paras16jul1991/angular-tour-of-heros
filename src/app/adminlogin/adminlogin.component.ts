@@ -19,7 +19,7 @@ export class AdminloginComponent implements OnInit {
  
     ngOnInit() {
         // reset login status
-        this.authenticationService.logout();
+       // this.authenticationService.logout();
     }
  
     login() {
