@@ -34,6 +34,17 @@ export class AuthenticationService {
                 }
             });
     }
+	
+	
+	 signup(username: string, password: string): Observable<boolean> {
+        return this.http.post('/sign-up', JSON.stringify({ username: username, password: password }))
+            .map((response: Response) => {
+                var token = response.headers.get('Authorization');
+                console.log(token);
+                return false;
+                
+            });
+    }
  
     logout(): void {
         // clear token remove user from local storage to log user out
