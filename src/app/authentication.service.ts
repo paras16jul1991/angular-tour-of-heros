@@ -44,10 +44,7 @@ export class AuthenticationService {
      
 		return this.http.post('/sign-up', JSON.stringify({ username: username, password: password }),options)
             .map((response: Response) => {
-                var token = response.headers.get('Authorization');
-                console.log(token);
                 return false;
-                
             });
     }
  
