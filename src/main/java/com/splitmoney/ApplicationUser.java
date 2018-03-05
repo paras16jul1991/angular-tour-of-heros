@@ -8,7 +8,10 @@ public class ApplicationUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String username;
+    public void setId(long id) {
+		this.id = id;
+	}
+	private String username;
     private String password;
     public long getId() {
         return id;

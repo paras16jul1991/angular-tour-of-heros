@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
+import { Http, Headers, Response, RequestOptions, RequestMethod } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
  
@@ -37,7 +37,12 @@ export class AuthenticationService {
 	
 	
 	 signup(username: string, password: string): Observable<boolean> {
-        return this.http.post('/sign-up', JSON.stringify({ username: username, password: password }))
+
+		const headers = new Headers();
+		headers.append('Content-Type', 'application/json');
+		let options = new RequestOptions({ headers: headers });
+     
+		return this.http.post('/sign-up', JSON.stringify({ username: username, password: password }),options)
             .map((response: Response) => {
                 var token = response.headers.get('Authorization');
                 console.log(token);
